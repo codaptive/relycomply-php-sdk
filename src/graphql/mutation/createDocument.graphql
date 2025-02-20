@@ -1,0 +1,36 @@
+mutation(
+    $input: CreateDocumentInput!
+) {
+    createDocument(
+        input: $input
+    ) {
+        document {
+            id
+            created
+            documentType {
+                name
+                created
+            }
+            format
+            url
+            customer {
+                id
+                firstName
+                lastName
+            }
+            validations {
+                edges {
+                    node {
+                        validator
+                        checks {
+                            key
+                            label
+                            passed
+                            message
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

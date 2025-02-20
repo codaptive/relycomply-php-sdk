@@ -1,0 +1,43 @@
+query ($id: String) {
+    assessments(id: $id) {
+        edges {
+            node {
+                id
+                complete
+                status
+                webhookUrl
+                created
+                updated
+                assessmentConfig {
+                    name
+                    assessmentType
+                }
+                customer {
+                    id
+                }
+                screenings {
+                    edges {
+                        node {
+                            id
+                            outcome
+                            screeningConfig {
+                                name
+                                screeningType
+                            }
+                            cases {
+                                edges {
+                                    node {
+                                        id
+                                        closed
+                                        state
+                                        outcome
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

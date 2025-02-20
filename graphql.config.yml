@@ -1,0 +1,8 @@
+schema: schema.graphql
+documents: '**/*.graphql'
+extensions:
+  endpoints:
+    default:
+      url: https://app.relycomply.com/graphql/
+      headers:
+        Authorization: Bearer ${TOKEN}

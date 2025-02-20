@@ -1,0 +1,20 @@
+mutation (
+    $input: CreateAssessmentInput!
+) {
+    createAssessment(
+        input: $input
+    ) {
+        assessment {
+            id
+            complete
+            status
+            webhookUrl
+            created
+            customer {
+                id
+                firstName
+                lastName
+            }
+        }
+    }
+}

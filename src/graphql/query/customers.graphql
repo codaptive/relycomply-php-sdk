@@ -1,0 +1,22 @@
+query ($identifier: String) {
+    customers(identifier: $identifier) {
+        edges {
+            node {
+                id
+                firstName
+                lastName
+                birthdate
+                nationality
+                idDocumentCode
+                assessments {
+                    edges {
+                        node {
+                            id
+                            status
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

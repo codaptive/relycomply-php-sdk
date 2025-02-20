@@ -1,0 +1,9 @@
+mutation ($input: CreateAssessmentLinkInput!) {
+    createAssessmentLink(input: $input) {
+        assessmentLink {
+            id
+            created
+            updated
+        }
+    }
+}

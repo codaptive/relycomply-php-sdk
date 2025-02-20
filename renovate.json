@@ -1,0 +1,30 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+        "config:recommended",
+        ":disableDependencyDashboard"
+    ],
+    "labels": [
+        "dependencies"
+    ],
+    "schedule": [
+        "* 0-4,16-20 * * *"
+    ],
+    "packageRules": [
+        {
+            "matchUpdateTypes": [
+                "minor",
+                "patch",
+                "pin",
+                "digest"
+            ],
+        },
+        {
+            "matchManagers": [
+                "composer",
+                "github-actions"
+            ],
+            "groupName": "{{manager}}"
+        }
+    ]
+}
