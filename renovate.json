@@ -17,7 +17,7 @@
                 "patch",
                 "pin",
                 "digest"
-            ],
+            ]
         },
         {
             "matchManagers": [
